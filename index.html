@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Automation for Businesses | AI Anthony</title>
+  <meta name="description" content="AI automation systems that capture leads, follow up instantly, book appointments, and streamline operations—without hiring more staff." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://ai-anthony.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Automation for Businesses | AI Anthony" />
+  <meta property="og:description" content="Automate lead capture, follow-up, appointment booking, and back-office workflows with AI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ai-anthony.com/" />
+
+  <!-- Basic styling -->
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#0f1733;
+      --muted:#a7b0d6;
+      --text:#eaf0ff;
+      --accent:#7c5cff;
+      --accent2:#22c55e;
+      --border:rgba(255,255,255,.12);
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius:18px;
+      --max:1100px;
+      --font: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background:
+        radial-gradient(1200px 700px at 20% -10%, rgba(124,92,255,.35), transparent 60%),
+        radial-gradient(1000px 600px at 90% 10%, rgba(34,197,94,.25), transparent 55%),
+        linear-gradient(180deg, #070a14 0%, var(--bg) 35%, #070a14 100%);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:18px; padding:14px 0;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px}
+    .logo{
+      width:34px; height:34px; border-radius:10px;
+      background:linear-gradient(135deg, var(--accent), rgba(34,197,94,.85));
+      box-shadow:0 10px 30px rgba(124,92,255,.25);
+    }
+    .navlinks{display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-end}
+    .navlinks a{color:var(--muted); font-weight:600; font-size:14px}
+    .navlinks a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px; border-radius:12px; border:1px solid var(--border);
+      background:rgba(255,255,255,.04); color:var(--text); font-weight:700;
+      transition:.15s ease; gap:8px;
+    }
+    .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.07)}
+    .btn.primary{
+      background:linear-gradient(135deg, var(--accent), #5b7cff);
+      border:0;
+      box-shadow:0 16px 40px rgba(124,92,255,.25);
+    }
+    .btn.green{
+      background:linear-gradient(135deg, var(--accent2), #16a34a);
+      border:0;
+      box-shadow:0 16px 40px rgba(34,197,94,.18);
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:22px;
+      align-items:stretch;
+      padding:24px 0 10px;
+    }
+    @media(max-width: 900px){
+      .hero{grid-template-columns:1fr; padding-top:10px}
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 12px; border:1px solid var(--border); border-radius:999px;
+      background:rgba(255,255,255,.03);
+      color:var(--muted); font-weight:700; font-size:13px;
+    }
+    .dot{width:8px; height:8px; border-radius:99px; background:var(--accent2); box-shadow:0 0 0 6px rgba(34,197,94,.12)}
+    h1{margin:14px 0 10px; font-size:42px; line-height:1.1}
+    @media(max-width: 520px){ h1{font-size:34px} }
+    .sub{color:var(--muted); font-size:16px; max-width:60ch}
+    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .badges{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .badge{
+      padding:8px 10px; border-radius:999px;
+      background:rgba(255,255,255,.03); border:1px solid var(--border);
+      color:var(--muted); font-weight:700; font-size:13px;
+    }
+
+    .grid{
+      display:grid; grid-template-columns:repeat(3, 1fr);
+      gap:16px; margin-top:16px;
+    }
+    @media(max-width: 900px){ .grid{grid-template-columns:1fr} }
+    .mini h3{margin:0 0 6px; font-size:18px}
+    .mini p{margin:0; color:var(--muted); font-size:14px}
+
+    .section{padding:20px 0}
+    .section h2{margin:0 0 10px; font-size:28px}
+    .section p.lead{margin:0 0 16px; color:var(--muted); max-width:70ch}
+
+    .services{
+      display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;
+    }
+    @media(max-width: 900px){ .services{grid-template-columns:1fr} }
+    .svc h3{margin:0 0 8px}
+    .svc ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    .svc li{margin:6px 0}
+
+    .proof{
+      display:grid; grid-template-columns: 1fr 1fr; gap:16px;
+    }
+    @media(max-width: 900px){ .proof{grid-template-columns:1fr} }
+    .quote{
+      margin:0; color:var(--muted);
+      padding:14px; border-radius:14px; border:1px solid var(--border);
+      background:rgba(0,0,0,.15);
+    }
+
+    form{display:grid; gap:10px; margin-top:10px}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    @media(max-width: 520px){ .row{grid-template-columns:1fr} }
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.2);
+      color:var(--text);
+      outline:none;
+      font-size:14px;
+    }
+    textarea{min-height:110px; resize:vertical}
+    .fine{
+      font-size:12px; color:var(--muted); margin-top:10px;
+    }
+    .footer{
+      padding:28px 0 40px;
+      color:var(--muted);
+      font-size:13px;
+      border-top:1px solid rgba(255,255,255,.08);
+      margin-top:22px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px; border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      font-weight:700;
+      font-size:13px;
+    }
+    .highlight{color:var(--text)}
+  </style>
+
+  <!-- LocalBusiness schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"AI Anthony",
+    "url":"https://ai-anthony.com",
+    "areaServed":"United States",
+    "description":"AI automation systems for lead capture, follow-up, appointment booking, and operations.",
+    "serviceType":["AI Automation","Workflow Automation","AI Chatbots","CRM Automation"]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>AI Anthony</div>
+      </div>
+      <nav class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#offers">Offers</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn">Free Audit</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <div class="kicker"><span class="dot"></span> AI automation for businesses (done-for-you)</div>
+        <h1>Turn leads into booked appointments — automatically.</h1>
+        <p class="sub">
+          I build AI automation systems that respond instantly, qualify prospects, book appointments,
+          and streamline back-office workflows so you can grow without hiring more staff.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Get a Free Automation Audit</a>
+          <a class="btn" href="#services">See What I Build</a>
+          <a class="btn green" href="tel:+18004841935">Call Now</a>
+        </div>
+
+        <div class="badges">
+          <div class="badge">24/7 AI reception</div>
+          <div class="badge">SMS + email follow-up</div>
+          <div class="badge">CRM pipelines</div>
+          <div class="badge">Appointment booking</div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <div class="pill">⚡ Typical outcomes: <span class="highlight">faster follow-up • higher show-rate • less admin</span></div>
+
+        <div class="grid">
+          <div class="mini">
+            <h3>Instant Response</h3>
+            <p>New leads get an automated reply in seconds via SMS/email/web chat.</p>
+          </div>
+          <div class="mini">
+            <h3>Auto-Qualification</h3>
+            <p>AI asks questions, tags intent, and routes hot leads to your calendar.</p>
+          </div>
+          <div class="mini">
+            <h3>Booked Meetings</h3>
+            <p>Prospects schedule themselves, get reminders, and show up more often.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:14px; border-top:1px solid rgba(255,255,255,.08); padding-top:14px;">
+          <div class="pill">✅ Best for: Local services • Real estate • Medical • B2B</div>
+          <p class="fine">
+            No long contracts required. Start with a quick audit and a simple automation sprint.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="services" class="section">
+      <h2>What I build</h2>
+      <p class="lead">Pick one system or stack multiple into a full automation engine.</p>
+
+      <div class="services">
+        <div class="card svc">
+          <h3>AI Lead Response + Booking</h3>
+          <p class="sub">Capture leads, qualify them, and auto-book calls.</p>
+          <ul>
+            <li>Web form → SMS/email response in seconds</li>
+            <li>AI qualification questions</li>
+            <li>Calendar booking + reminders</li>
+            <li>Missed-call text back</li>
+          </ul>
+        </div>
+
+        <div class="card svc">
+          <h3>CRM + Pipeline Automation</h3>
+          <p class="sub">Keep your pipeline clean and your team focused.</p>
+          <ul>
+            <li>Auto-create deals/contacts</li>
+            <li>Stage-based follow-ups</li>
+            <li>Task creation + notifications</li>
+            <li>Lead source tracking</li>
+          </ul>
+        </div>
+
+        <div class="card svc">
+          <h3>Operations + Back Office</h3>
+          <p class="sub">Automate repetitive work across your tools.</p>
+          <ul>
+            <li>Invoices, proposals, and docs</li>
+            <li>Internal AI knowledge base</li>
+            <li>Support triage + ticket routing</li>
+            <li>Reporting dashboards</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="offers" class="section">
+      <h2>Simple offers</h2>
+      <p class="lead">Start small, prove ROI fast, then scale.</p>
+
+      <div class="services">
+        <div class="card svc">
+          <h3>Free Automation Audit</h3>
+          <p class="sub">A quick scan of your lead flow + operations with a prioritized plan.</p>
+          <ul>
+            <li>Where leads are leaking</li>
+            <li>What to automate first</li>
+            <li>Tool stack recommendation</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Request Audit</a>
+          </div>
+        </div>
+
+        <div class="card svc">
+          <h3>48-Hour Automation Sprint</h3>
+          <p class="sub">Ship 1 revenue-driving automation in 2 days.</p>
+          <ul>
+            <li>Lead response + booking flow</li>
+            <li>CRM pipeline integration</li>
+            <li>Testing + launch checklist</li>
+          </ul>
+        </div>
+
+        <div class="card svc">
+          <h3>Monthly Optimization</h3>
+          <p class="sub">Ongoing improvements, reporting, and new automations.</p>
+          <ul>
+            <li>Conversion improvements</li>
+            <li>New workflows each month</li>
+            <li>Support + monitoring</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <h2>How it works</h2>
+      <p class="lead">Clear steps, fast implementation, minimal disruption to your business.</p>
+
+      <div class="services">
+        <div class="card svc">
+          <h3>1) Discover</h3>
+          <p class="sub">We map your current lead flow + bottlenecks in 15–30 minutes.</p>
+        </div>
+        <div class="card svc">
+          <h3>2) Build</h3>
+          <p class="sub">I build the automation, connect tools, and configure the AI prompts.</p>
+        </div>
+        <div class="card svc">
+          <h3>3) Launch</h3>
+          <p class="sub">We test end-to-end, then turn it on with tracking + reporting.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What clients say</h2>
+      <p class="lead">Sample placeholders — swap these with your real testimonials as you get them.</p>
+
+      <div class="proof">
+        <div class="card">
+          <p class="quote">“We started booking calls automatically within days. The follow-up speed alone changed everything.”</p>
+          <p class="fine">— Service Business Owner</p>
+        </div>
+        <div class="card">
+          <p class="quote">“Our pipeline is finally organized. No more chasing leads or forgetting follow-ups.”</p>
+          <p class="fine">— B2B Founder</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <h2>FAQ</h2>
+      <div class="services">
+        <div class="card svc">
+          <h3>What tools do you use?</h3>
+          <p class="sub">I can work with your stack (HubSpot, HighLevel, Zoho, Google Workspace, etc.) or recommend a simple setup.</p>
+        </div>
+        <div class="card svc">
+          <h3>How fast can this go live?</h3>
+          <p class="sub">Many systems can launch in days, depending on access and complexity.</p>
+        </div>
+        <div class="card svc">
+          <h3>Do I need to replace my current systems?</h3>
+          <p class="sub">No. Most automations connect to what you already use.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Request your free automation audit</h2>
+      <p class="lead">Tell me what you do and where leads/operations get stuck. I’ll reply with a simple plan.</p>
+
+      <div class="card">
+        <!-- Step 3 below explains how to set this action URL -->
+        <form action="https://formspref/xqeekjrz" method="POST">
+          <div class="row">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+          <div class="row">
+            <input type="text" name="company" placeholder="Company (optional)" />
+            <input type="text" name="phone" placeholder="Phone (optional)" />
+          </div>
+
+          <select name="need" required>
+            <option value="" disabled selected>What do you need most?</option>
+            <option>Leads → SMS/email follow-up → booking</option>
+            <option>CRM + pipeline automation</option>
+            <option>Operations automation (docs, support, reporting)</option>
+            <option>Not sure — I want recommendations</option>
+          </select>
+
+          <textarea name="message" placeholder="Briefly describe your business + what you want automated..." required></textarea>
+
+          <button class="btn primary" type="submit">Send Request</button>
+
+          <p class="fine">
+            By submitting, you agree to be contacted about your request. No spam. You can opt out anytime.
+          </p>
+        </form>
+
+        <div class="fine" style="margin-top:12px">
+          Prefer email or phone?<br />
+          Email: <a href="mailto:bradshawfunding@gmail.com">bradshawfunding@gmail.com</a> •
+          Phone: <a href="tel:+18004841935">1-800-484-1935</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap" style="padding:0">
+        <div>© <span id="year"></span> AI Anthony. All rights reserved.</div>
+        <div style="margin-top:8px">
+          <span class="fine">
+            Disclaimer: Information provided is for general business purposes and does not constitute legal, financial, or professional advice.
+            Results vary based on your business, market, and execution.
+          </span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
